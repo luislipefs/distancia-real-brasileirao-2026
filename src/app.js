@@ -1,6 +1,6 @@
 import { FIXED_ZONES, POINT_STEP, distanceBetween, pointRows, validateStandings, zoneForRank } from './model.js?v=20260922-5';
 import { crest, el, formatDate } from './components.js?v=20260922-5';
-import { LANGUAGES, SUPPORTED_LANGUAGES, formatPoints, ordinal, t } from './i18n.js?v=20260922-6';
+import { LANGUAGES, SUPPORTED_LANGUAGES, formatPoints, ordinal, t } from './i18n.js?v=20260923-1';
 
 const app = document.querySelector('#app');
 const storage = {
@@ -138,18 +138,28 @@ function renderOverview() {
   app.querySelector('#ties-summary').textContent = ties.length ? t(state.language, 'tieSummary', { clubs: tiedClubs, groups: ties.length }) : t(state.language, 'noTies');
 }
 
-function closePointGroups(teams, maxSpread = 4) {
+function closePointGroups(teams, maxNeighborGap = 2, minGroupSize = 3) {
   const groups = [];
   let group = [];
   for (const team of [...teams].sort((a, b) => a.rank - b.rank)) {
-    if (group.length && group[0].points - team.points > maxSpread) {
-      if (group.length > 1) groups.push(group);
+    if (group.length && group.at(-1).points - team.points > maxNeighborGap) {
+      if (group.length >= minGroupSize) groups.push(group);
       group = [];
     }
     group.push(team);
   }
-  if (group.length > 1) groups.push(group);
+  if (group.length >= minGroupSize) groups.push(group);
   return groups;
+}
+
+function centralPointGroup(groups, teamCount) {
+  if (!groups.length) return null;
+  const centerRank = (teamCount + 1) / 2;
+  return [...groups].sort((a, b) => {
+    const aCenter = (a[0].rank + a.at(-1).rank) / 2;
+    const bCenter = (b[0].rank + b.at(-1).rank) / 2;
+    return Math.abs(aCenter - centerRank) - Math.abs(bCenter - centerRank) || b.length - a.length;
+  })[0];
 }
 
 function renderChart() {
@@ -165,19 +175,24 @@ function renderChart() {
   const minPoints = teams.at(-1).points;
   const pointSpan = maxPoints - minPoints;
   const plotHeight = pointSpan * POINT_STEP + POINT_STEP;
-  const baseY = pointSpan * POINT_STEP + POINT_STEP / 2;
   const groups = closePointGroups(teams);
+  const centralGroup = centralPointGroup(groups, teams.length);
+  const centralTeamIds = new Set(centralGroup?.map(team => team.id) ?? []);
   const scroll = el('div', 'chart-scroll'); scroll.tabIndex = 0; scroll.setAttribute('aria-label', t(state.language, 'chartAria'));
 
   const insights = el('div', 'profile-insights');
   insights.append(el('span', 'profile-insights-title', t(state.language, 'closeGroups')));
   const groupList = el('div', 'profile-group-list');
-  groups.forEach(group => groupList.append(el('span', 'profile-group-chip', t(state.language, 'closeGroupRange', {
-    clubs: group.length,
-    high: group[0].points,
-    low: group.at(-1).points
-  }))));
-  if (!groups.length) groupList.append(el('span', 'profile-group-empty', t(state.language, 'noTies')));
+  [...groups].sort((a, b) => a === centralGroup ? -1 : b === centralGroup ? 1 : 0).forEach(group => {
+    const key = group === centralGroup ? 'centralPackRange' : 'closeGroupRange';
+    const chip = el('span', `profile-group-chip${group === centralGroup ? ' is-central' : ''}`, t(state.language, key, {
+      clubs: group.length,
+      high: group[0].points,
+      low: group.at(-1).points
+    }));
+    groupList.append(chip);
+  });
+  if (!groups.length) groupList.append(el('span', 'profile-group-empty', t(state.language, 'noCompactGroups')));
   insights.append(groupList);
 
   const chart = el('div', 'score-profile');
@@ -209,43 +224,26 @@ function renderChart() {
     }
   });
 
-  for (const group of groups) {
-    const firstIndex = teams.findIndex(team => team.id === group[0].id);
-    const highY = (maxPoints - group[0].points) * POINT_STEP + POINT_STEP / 2;
-    const lowY = (maxPoints - group.at(-1).points) * POINT_STEP + POINT_STEP / 2;
-    const band = el('span', 'score-cluster-band');
-    band.style.left = `${(firstIndex / teams.length) * 100}%`;
-    band.style.width = `${(group.length / teams.length) * 100}%`;
-    band.style.top = `${Math.max(0, highY - 17)}px`;
-    band.style.height = `${Math.max(34, lowY - highY + 34)}px`;
-    field.append(band);
-  }
-
-  teams.forEach((team, index) => {
-    const zone = `zone-${zoneForRank(team.rank, teams.length, state.zones)}`;
-    const top = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
-    const lane = el('span', `score-lane ${zone}`);
-    lane.style.left = `${(index / teams.length) * 100}%`;
-    lane.style.width = `${100 / teams.length}%`;
-    field.append(lane);
-    const bar = el('span', `score-value-bar ${zone}`);
-    bar.style.left = `${((index + .5) / teams.length) * 100}%`;
-    bar.style.top = `${top}px`;
-    bar.style.height = `${Math.max(2, baseY - top)}px`;
-    field.append(bar);
-    if (index > 0) {
-      const columnRule = el('span', 'score-column-rule');
-      columnRule.style.left = `${(index / teams.length) * 100}%`;
-      field.append(columnRule);
-    }
-  });
-
   const svgNS = 'http://www.w3.org/2000/svg';
   const lineSvg = document.createElementNS(svgNS, 'svg');
   lineSvg.classList.add('score-profile-line');
   lineSvg.setAttribute('viewBox', `0 0 1000 ${plotHeight}`);
   lineSvg.setAttribute('preserveAspectRatio', 'none');
   lineSvg.setAttribute('aria-hidden', 'true');
+  if (centralGroup?.length > 1) {
+    const highlight = document.createElementNS(svgNS, 'path');
+    highlight.classList.add('score-pack-highlight');
+    const pathData = centralGroup.map((team, groupIndex) => {
+      const index = teams.findIndex(candidate => candidate.id === team.id);
+      const x = ((index + .5) / teams.length) * 1000;
+      const y = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
+      return `${groupIndex === 0 ? 'M' : 'L'} ${x} ${y}`;
+    }).join(' ');
+    highlight.setAttribute('d', pathData);
+    highlight.setAttribute('fill', 'none');
+    highlight.setAttribute('vector-effect', 'non-scaling-stroke');
+    lineSvg.append(highlight);
+  }
   const path = document.createElementNS(svgNS, 'path');
   const linePoints = teams.map((team, index) => {
     const x = ((index + .5) / teams.length) * 1000;
@@ -260,7 +258,7 @@ function renderChart() {
 
   teams.forEach((team, index) => {
     const top = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
-    const marker = el('button', `score-marker zone-${zoneForRank(team.rank, teams.length, state.zones)}${team.id === current.id ? ' is-selected' : ''}`);
+    const marker = el('button', `score-marker zone-${zoneForRank(team.rank, teams.length, state.zones)}${centralTeamIds.has(team.id) ? ' is-central-pack' : ''}${team.id === current.id ? ' is-selected' : ''}`);
     marker.type = 'button';
     marker.dataset.teamId = String(team.id);
     marker.style.setProperty('--team-order', String(index));
@@ -294,7 +292,9 @@ function renderChart() {
     const y1 = (maxPoints - teams[index - 1].points) * POINT_STEP + POINT_STEP / 2;
     const y2 = (maxPoints - teams[index].points) * POINT_STEP + POINT_STEP / 2;
     const label = el('span', 'score-gap-label', pointDistance(gap));
-    label.style.left = `${(index / teams.length) * 100}%`;
+    const x = index / teams.length;
+    label.style.left = `${x * 100}%`;
+    if (x > .82) label.classList.add('is-edge-right');
     label.style.top = `${(y1 + y2) / 2}px`;
     label.setAttribute('aria-label', pointDistance(gap));
     field.append(label);
