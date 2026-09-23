@@ -237,23 +237,21 @@ html.ui-transition body{opacity:.35;transform:translateY(3px)}
 
 /* A current-season profile: rank runs left to right; points stay on the fixed vertical scale. */
 .score-profile{min-width:0;padding:18px 20px 20px}
-.profile-insights{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 0 14px}
-.profile-insights-title{color:var(--muted);font-size:9px;font-weight:850;letter-spacing:.12em;white-space:nowrap}
-.profile-group-list{display:flex;align-items:center;gap:7px;min-width:0;overflow-x:auto;scrollbar-width:thin}
+.profile-insights{display:flex;align-items:center;gap:12px;min-height:0;padding:0 0 12px}
 .profile-group-chip{display:inline-flex;align-items:center;min-height:28px;padding:5px 9px;border:1px solid color-mix(in srgb,var(--continental) 38%,var(--line));border-radius:5px;background:color-mix(in srgb,var(--continental) 9%,var(--surface));color:var(--text);font-size:10px;font-weight:750;white-space:nowrap}
-.profile-group-chip.is-central{min-height:32px;border-color:color-mix(in srgb,var(--accent) 70%,var(--line));background:color-mix(in srgb,var(--accent) 13%,var(--surface));color:var(--text);font-weight:900;box-shadow:inset 3px 0 0 var(--accent)}
+.profile-group-chip.is-central{min-height:30px;border-color:color-mix(in srgb,var(--accent) 55%,var(--line));border-radius:999px;background:color-mix(in srgb,var(--accent) 10%,var(--surface));color:var(--text);font-weight:900;box-shadow:inset 3px 0 0 var(--accent)}
 .profile-group-empty{color:var(--muted);font-size:10px}
 .score-board{display:grid;grid-template-columns:58px minmax(0,1fr);grid-template-rows:var(--profile-height) 58px auto;position:relative;align-items:stretch}
 .score-axis{position:relative;grid-column:1;grid-row:1;height:var(--profile-height);border-right:1px solid var(--line);}
 .score-axis-value{position:absolute;right:10px;transform:translateY(-50%);color:var(--muted);font:700 10px ui-monospace,"Cascadia Code",Consolas,monospace;font-variant-numeric:tabular-nums}
 .score-axis-value.is-occupied{color:var(--accent);font-size:12px;font-weight:900}
 .score-field{grid-column:2;grid-row:1;position:relative;min-width:0;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 36%,var(--surface)),var(--surface))}
-.score-guide{position:absolute;z-index:0;left:0;right:0;border-top:1px solid var(--line-soft);opacity:.7;pointer-events:none}
-.score-guide.is-major{border-top-color:var(--line);opacity:.95}
-.score-guide.is-occupied{border-top:1px solid color-mix(in srgb,var(--accent) 52%,var(--line));opacity:1}
+.score-guide{position:absolute;z-index:0;left:0;right:0;border-top:1px solid var(--line-soft);opacity:.38;pointer-events:none}
+.score-guide.is-major{border-top-color:var(--line);opacity:.72}
+.score-guide.is-occupied{border-top:1px solid color-mix(in srgb,var(--accent) 52%,var(--line));opacity:.9}
+.score-pack-band{position:absolute;z-index:1;border:1px solid color-mix(in srgb,var(--accent) 24%,transparent);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 5%,transparent),color-mix(in srgb,var(--accent) 9%,transparent));pointer-events:none}
 .score-profile-line{position:absolute;z-index:3;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.score-profile-line path:not(.score-pack-highlight){stroke:var(--profile-line,var(--accent));stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;opacity:.94;filter:drop-shadow(0 1px 3px color-mix(in srgb,var(--accent) 18%,transparent))}
-.score-profile-line .score-pack-highlight{stroke:var(--accent);stroke-width:44px;stroke-opacity:.14;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.score-profile-line path{stroke:var(--profile-line,var(--accent));stroke-width:2.25;stroke-linejoin:round;stroke-linecap:round;opacity:.8}
 :root[data-theme="dark"]{--profile-line:#e1ed75}
 :root[data-theme="light"]{--profile-line:#728c25}
 .score-marker{position:absolute;z-index:5;display:flex;align-items:center;justify-content:center;width:32px;height:32px;padding:2px;border:1px solid color-mix(in srgb,var(--line) 70%,var(--text));border-radius:9px;background:color-mix(in srgb,var(--surface) 91%,transparent);color:var(--text);box-shadow:0 4px 11px rgba(0,0,0,.2);transform:translate(-50%,-50%);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;animation:profile-marker-in .36s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--team-order) * 14ms)}
@@ -267,15 +265,13 @@ html.ui-transition body{opacity:.35;transform:translateY(3px)}
 .score-marker.zone-direct{border-bottom:3px solid var(--direct)}
 .score-marker.zone-continental{border-bottom:3px solid var(--continental)}
 .score-marker.zone-relegation{border-bottom:3px solid var(--relegation)}
-.score-marker-rank{position:absolute;right:50%;bottom:-7px;transform:translateX(50%);display:grid;place-items:center;min-width:17px;height:15px;padding:0 2px;border:1px solid var(--surface);border-radius:99px;background:var(--surface-2);color:var(--muted);font:800 8px ui-monospace,"Cascadia Code",Consolas,monospace;line-height:1}
-.score-marker.is-selected .score-marker-rank{background:var(--accent);color:var(--accent-text)}
 .score-gap-label{position:absolute;z-index:7;display:inline-flex;align-items:center;justify-content:center;max-width:152px;padding:5px 8px;border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));border-radius:99px;background:color-mix(in srgb,var(--surface-2) 96%,transparent);color:var(--text);font-size:9px;font-weight:850;line-height:1.15;text-align:center;white-space:nowrap;box-shadow:0 4px 15px rgba(0,0,0,.18);transform:translate(-50%,-50%);pointer-events:none}
 .score-gap-label.is-edge-right{transform:translate(-100%,-50%)}
 .score-team-labels{grid-column:2;grid-row:2;display:grid;min-width:0;border-bottom:1px solid var(--line);background:var(--surface-2)}
 .score-team-label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;border-left:1px solid var(--line-soft);padding:5px 2px;text-align:center}
 .score-team-label:last-child{border-right:1px solid var(--line-soft)}
 .score-team-rank{color:var(--muted);font:800 9px ui-monospace,"Cascadia Code",Consolas,monospace}
-.score-team-name{display:block;max-width:100%;overflow:hidden;color:var(--text);font-size:9px;font-weight:750;line-height:1.2;text-overflow:ellipsis;white-space:nowrap}
+.score-team-name{display:block;max-width:100%;overflow:hidden;color:var(--text);font-size:10px;font-weight:750;line-height:1.2;text-overflow:ellipsis;white-space:nowrap}
 .profile-baseline-note{grid-column:1/-1;grid-row:3;margin:0;padding:11px 0 0;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.09em;text-align:right}
 .chart-footnote{line-height:1.55}
 .gap-marker::before,.gap-marker::after{display:none}
@@ -283,13 +279,12 @@ html.ui-transition body{opacity:.35;transform:translateY(3px)}
 @media(max-width:620px){
   .score-profile{padding:14px 10px 15px}
   .profile-insights{align-items:flex-start;flex-direction:column;gap:7px;padding-bottom:12px}
-  .profile-group-list{width:100%;padding-bottom:2px}
   .score-board{grid-template-columns:45px minmax(960px,1fr);grid-template-rows:var(--profile-height) 58px auto}
   .score-field,.score-team-labels{min-width:960px}
   .score-marker{width:35px;height:35px;border-radius:9px}
   .score-marker .crest{width:24px;height:24px}
   .score-marker .crest-image{max-width:23px;max-height:23px}
-  .score-team-name{font-size:8px}
+  .score-team-name{font-size:9px}
   .profile-baseline-note{font-size:8px;letter-spacing:.04em}
 }
 @media(max-width:1100px){
@@ -306,4 +301,3 @@ html.ui-transition body{opacity:.35;transform:translateY(3px)}
 @media(max-width:620px){
   .score-board{grid-template-columns:45px minmax(960px,1fr)}
 }
-

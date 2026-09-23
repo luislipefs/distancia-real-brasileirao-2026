@@ -28,7 +28,7 @@ const messages = {
     pointsClubs: 'POSIÇÃO / PONTOS', tableCaption: 'POS. / CLUBES / PONTOS', fixedScale: 'RÉGUA FIXA · {step} PX / PONTO',
     chartAria: 'Perfil da classificação. Role horizontalmente para percorrer os clubes.', tableAria: 'Tabela tradicional. Role horizontalmente se necessário.',
     chartNote: 'A régua mantém 48 px por ponto e preserva os intervalos vazios. Empates ficam alinhados; o pelotão central destaca vizinhos separados por até 2 pontos.',
-    closeGroups: 'PELOTÕES POR PROXIMIDADE', closeGroupRange: '{clubs} clubes · {high}–{low} pts', centralPackRange: 'PELOTÃO CENTRAL · {clubs} CLUBES · {high}–{low} PTS', noCompactGroups: 'Nenhum pelotão compacto', profileBase: 'BASE NA PONTUAÇÃO DO ÚLTIMO COLOCADO · {points} PTS',
+    centralPackRange: 'PELOTÃO CENTRAL · {clubs} CLUBES · {high}–{low} PTS', noCompactGroups: 'Nenhum pelotão compacto', profileBase: 'BASE NA PONTUAÇÃO DO ÚLTIMO COLOCADO · {points} PTS',
     clubFocus: 'CLUBE EM FOCO', inTable: 'NA CLASSIFICAÇÃO', fromLeader: 'DO LÍDER', pointsAbove: 'PONTUAÇÃO ACIMA', pointsBelow: 'PONTUAÇÃO ABAIXO',
     selectClub: 'Selecione outro clube na régua ou na tabela para comparar as distâncias.',
     rules: 'Regras do campeonato', brazilianChampion: 'Campeão brasileiro', directRange: '1º ao 4º', preRange: '5º', relegationRange: '17º–20º',
@@ -58,7 +58,7 @@ const messages = {
     pointsClubs: 'POSITION / POINTS', tableCaption: 'POS. / CLUBS / POINTS', fixedScale: 'FIXED SCALE · {step} PX / POINT',
     chartAria: 'League profile. Scroll horizontally to move across the clubs.', tableAria: 'Traditional table. Scroll horizontally if needed.',
     chartNote: 'The scale keeps 48 px per point and preserves empty intervals. Tied clubs stay aligned; the central pack highlights neighbors no more than two points apart.',
-    closeGroups: 'CLOSE POINT PACKS', closeGroupRange: '{clubs} clubs · {high}–{low} pts', centralPackRange: 'MID-TABLE PACK · {clubs} CLUBS · {high}–{low} PTS', noCompactGroups: 'No compact pack', profileBase: 'BASE AT THE LAST-PLACED CLUB · {points} PTS',
+    centralPackRange: 'MID-TABLE PACK · {clubs} CLUBS · {high}–{low} PTS', noCompactGroups: 'No compact pack', profileBase: 'BASE AT THE LAST-PLACED CLUB · {points} PTS',
     clubFocus: 'CLUB IN FOCUS', inTable: 'IN THE TABLE', fromLeader: 'FROM LEADER', pointsAbove: 'POINTS ABOVE', pointsBelow: 'POINTS BELOW',
     selectClub: 'Select another club on the ladder or table to compare distances.',
     rules: 'Competition rules', brazilianChampion: 'Brazilian champion', directRange: '1st to 4th', preRange: '5th', relegationRange: '17th–20th',
@@ -88,7 +88,7 @@ const messages = {
     pointsClubs: 'POSICIÓN / PUNTOS', tableCaption: 'POS. / CLUBES / PUNTOS', fixedScale: 'ESCALA FIJA · {step} PX / PUNTO',
     chartAria: 'Perfil de la clasificación. Desplázate horizontalmente para recorrer los clubes.', tableAria: 'Tabla tradicional. Desplázate horizontalmente si es necesario.',
     chartNote: 'La escala mantiene 48 px por punto y conserva los intervalos vacíos. Los empates quedan alineados; el pelotón central destaca a vecinos separados por un máximo de 2 puntos.',
-    closeGroups: 'PELOTONES POR PROXIMIDAD', closeGroupRange: '{clubs} clubes · {high}–{low} pts', centralPackRange: 'PELOTÓN CENTRAL · {clubs} CLUBES · {high}–{low} PTS', noCompactGroups: 'No hay un pelotón compacto', profileBase: 'BASE EN LA PUNTUACIÓN DEL ÚLTIMO · {points} PTS',
+    centralPackRange: 'PELOTÓN CENTRAL · {clubs} CLUBES · {high}–{low} PTS', noCompactGroups: 'No hay un pelotón compacto', profileBase: 'BASE EN LA PUNTUACIÓN DEL ÚLTIMO · {points} PTS',
     clubFocus: 'CLUB EN FOCO', inTable: 'EN LA CLASIFICACIÓN', fromLeader: 'DEL LÍDER', pointsAbove: 'PUNTOS ARRIBA', pointsBelow: 'PUNTOS ABAJO',
     selectClub: 'Selecciona otro club en la escala o la tabla para comparar distancias.',
     rules: 'Reglas del campeonato', brazilianChampion: 'Campeón brasileño', directRange: '1.º al 4.º', preRange: '5.º', relegationRange: '17.º–20.º',
@@ -118,7 +118,7 @@ const messages = {
     pointsClubs: '順位 / ポイント', tableCaption: '順位 / クラブ / ポイント', fixedScale: '固定スケール · 1ポイント {step} PX',
     chartAria: '順位表のポイントプロファイル。横にスクロールしてクラブを確認できます。', tableAria: '通常の順位表。必要に応じて横にスクロールできます。',
     chartNote: '1ポイントを48pxで表示し、空いた間隔も残します。同ポイントのクラブは同じ高さに並び、中央集団は隣同士の差が2ポイント以内です。',
-    closeGroups: 'ポイント差の小さい集団', closeGroupRange: '{clubs}クラブ · {high}〜{low}ポイント', centralPackRange: '中位集団 · {clubs}クラブ · {high}〜{low}ポイント', noCompactGroups: '近接した集団はありません', profileBase: '最下位クラブのポイントを基準 · {points}ポイント',
+    centralPackRange: '中位集団 · {clubs}クラブ · {high}〜{low}ポイント', noCompactGroups: '近接した集団はありません', profileBase: '最下位クラブのポイントを基準 · {points}ポイント',
     clubFocus: '選択中のクラブ', inTable: '順位', fromLeader: '首位との差', pointsAbove: '上のクラブとの差', pointsBelow: '下のクラブとの差',
     selectClub: 'スケールまたは順位表でクラブを選び、差を比較できます。',
     rules: '大会ルール', brazilianChampion: 'ブラジル王者', directRange: '1位〜4位', preRange: '5位', relegationRange: '17位〜20位',
@@ -148,7 +148,7 @@ const messages = {
     pointsClubs: 'POSITION / POINTS', tableCaption: 'POS. / CLUBS / POINTS', fixedScale: 'ÉCHELLE FIXE · {step} PX / POINT',
     chartAria: 'Profil du classement. Faites défiler horizontalement pour parcourir les clubs.', tableAria: 'Classement classique. Faites défiler horizontalement si nécessaire.',
     chartNote: 'L’échelle garde 48 px par point et les intervalles vides. Les ex æquo restent alignés ; le groupe central rassemble les voisins séparés de 2 points au maximum.',
-    closeGroups: 'GROUPES DE POINTS PROCHES', closeGroupRange: '{clubs} clubs · {high}–{low} pts', centralPackRange: 'GROUPE CENTRAL · {clubs} CLUBS · {high}–{low} PTS', noCompactGroups: 'Aucun groupe compact', profileBase: 'BASE AU SCORE DU DERNIER · {points} PTS',
+    centralPackRange: 'GROUPE CENTRAL · {clubs} CLUBS · {high}–{low} PTS', noCompactGroups: 'Aucun groupe compact', profileBase: 'BASE AU SCORE DU DERNIER · {points} PTS',
     clubFocus: 'CLUB SÉLECTIONNÉ', inTable: 'AU CLASSEMENT', fromLeader: 'DU LEADER', pointsAbove: 'POINTS AU-DESSUS', pointsBelow: 'POINTS EN DESSOUS',
     selectClub: 'Sélectionnez un autre club sur l’échelle ou dans le tableau pour comparer les écarts.',
     rules: 'Règles du championnat', brazilianChampion: 'Champion du Brésil', directRange: '1er au 4e', preRange: '5e', relegationRange: '17e–20e',
@@ -183,4 +183,3 @@ export function ordinal(language, rank) {
   if (language === 'es') return `${rank}.º`;
   return `${rank}º`;
 }
-

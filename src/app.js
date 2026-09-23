@@ -1,6 +1,6 @@
 import { FIXED_ZONES, POINT_STEP, distanceBetween, pointRows, validateStandings, zoneForRank } from './model.js?v=20260922-5';
 import { crest, el, formatDate } from './components.js?v=20260922-5';
-import { LANGUAGES, SUPPORTED_LANGUAGES, formatPoints, ordinal, t } from './i18n.js?v=20260923-1';
+import { LANGUAGES, SUPPORTED_LANGUAGES, formatPoints, ordinal, t } from './i18n.js?v=20260923-2';
 
 const app = document.querySelector('#app');
 const storage = {
@@ -181,19 +181,15 @@ function renderChart() {
   const scroll = el('div', 'chart-scroll'); scroll.tabIndex = 0; scroll.setAttribute('aria-label', t(state.language, 'chartAria'));
 
   const insights = el('div', 'profile-insights');
-  insights.append(el('span', 'profile-insights-title', t(state.language, 'closeGroups')));
-  const groupList = el('div', 'profile-group-list');
-  [...groups].sort((a, b) => a === centralGroup ? -1 : b === centralGroup ? 1 : 0).forEach(group => {
-    const key = group === centralGroup ? 'centralPackRange' : 'closeGroupRange';
-    const chip = el('span', `profile-group-chip${group === centralGroup ? ' is-central' : ''}`, t(state.language, key, {
-      clubs: group.length,
-      high: group[0].points,
-      low: group.at(-1).points
-    }));
-    groupList.append(chip);
-  });
-  if (!groups.length) groupList.append(el('span', 'profile-group-empty', t(state.language, 'noCompactGroups')));
-  insights.append(groupList);
+  if (centralGroup) {
+    insights.append(el('span', 'profile-group-chip is-central', t(state.language, 'centralPackRange', {
+      clubs: centralGroup.length,
+      high: centralGroup[0].points,
+      low: centralGroup.at(-1).points
+    })));
+  } else {
+    insights.append(el('span', 'profile-group-empty', t(state.language, 'noCompactGroups')));
+  }
 
   const chart = el('div', 'score-profile');
   chart.style.setProperty('--point-step', `${POINT_STEP}px`);
@@ -224,26 +220,26 @@ function renderChart() {
     }
   });
 
+  if (centralGroup?.length > 1) {
+    const firstIndex = teams.findIndex(team => team.id === centralGroup[0].id);
+    const lastIndex = teams.findIndex(team => team.id === centralGroup.at(-1).id);
+    const high = centralGroup[0].points;
+    const low = centralGroup.at(-1).points;
+    const packBand = el('span', 'score-pack-band');
+    packBand.style.left = `${(firstIndex / teams.length) * 100}%`;
+    packBand.style.width = `${((lastIndex - firstIndex + 1) / teams.length) * 100}%`;
+    packBand.style.top = `${(maxPoints - high) * POINT_STEP}px`;
+    packBand.style.height = `${(high - low + 1) * POINT_STEP}px`;
+    packBand.setAttribute('aria-hidden', 'true');
+    field.append(packBand);
+  }
+
   const svgNS = 'http://www.w3.org/2000/svg';
   const lineSvg = document.createElementNS(svgNS, 'svg');
   lineSvg.classList.add('score-profile-line');
   lineSvg.setAttribute('viewBox', `0 0 1000 ${plotHeight}`);
   lineSvg.setAttribute('preserveAspectRatio', 'none');
   lineSvg.setAttribute('aria-hidden', 'true');
-  if (centralGroup?.length > 1) {
-    const highlight = document.createElementNS(svgNS, 'path');
-    highlight.classList.add('score-pack-highlight');
-    const pathData = centralGroup.map((team, groupIndex) => {
-      const index = teams.findIndex(candidate => candidate.id === team.id);
-      const x = ((index + .5) / teams.length) * 1000;
-      const y = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
-      return `${groupIndex === 0 ? 'M' : 'L'} ${x} ${y}`;
-    }).join(' ');
-    highlight.setAttribute('d', pathData);
-    highlight.setAttribute('fill', 'none');
-    highlight.setAttribute('vector-effect', 'non-scaling-stroke');
-    lineSvg.append(highlight);
-  }
   const path = document.createElementNS(svgNS, 'path');
   const linePoints = teams.map((team, index) => {
     const x = ((index + .5) / teams.length) * 1000;
@@ -269,7 +265,7 @@ function renderChart() {
     marker.title = `${team.name} · ${formatPoints(state.language, team.points)}`;
     const teamCrest = crest(team);
     teamCrest.setAttribute('aria-hidden', 'true');
-    marker.append(teamCrest, el('span', 'score-marker-rank', String(team.rank).padStart(2, '0')));
+    marker.append(teamCrest);
     marker.addEventListener('click', () => {
       state.selectedId = team.id;
       renderChart();
@@ -288,7 +284,7 @@ function renderChart() {
 
   for (let index = 1; index < teams.length; index++) {
     const gap = teams[index - 1].points - teams[index].points;
-    if (gap < 5) continue;
+    if (gap <= 5) continue;
     const y1 = (maxPoints - teams[index - 1].points) * POINT_STEP + POINT_STEP / 2;
     const y2 = (maxPoints - teams[index].points) * POINT_STEP + POINT_STEP / 2;
     const label = el('span', 'score-gap-label', pointDistance(gap));
@@ -391,4 +387,3 @@ function render() {
 }
 
 load();
-
