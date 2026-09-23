@@ -1,6 +1,6 @@
 import { FIXED_ZONES, POINT_STEP, distanceBetween, pointRows, validateStandings, zoneForRank } from './model.js?v=20260922-5';
-import { clubButton, crest, el, formatDate } from './components.js?v=20260922-5';
-import { LANGUAGES, SUPPORTED_LANGUAGES, formatPoints, ordinal, t } from './i18n.js?v=20260922-5';
+import { crest, el, formatDate } from './components.js?v=20260922-5';
+import { LANGUAGES, SUPPORTED_LANGUAGES, formatPoints, ordinal, t } from './i18n.js?v=20260922-6';
 
 const app = document.querySelector('#app');
 const storage = {
@@ -138,6 +138,20 @@ function renderOverview() {
   app.querySelector('#ties-summary').textContent = ties.length ? t(state.language, 'tieSummary', { clubs: tiedClubs, groups: ties.length }) : t(state.language, 'noTies');
 }
 
+function closePointGroups(teams, maxSpread = 4) {
+  const groups = [];
+  let group = [];
+  for (const team of [...teams].sort((a, b) => a.rank - b.rank)) {
+    if (group.length && group[0].points - team.points > maxSpread) {
+      if (group.length > 1) groups.push(group);
+      group = [];
+    }
+    group.push(team);
+  }
+  if (group.length > 1) groups.push(group);
+  return groups;
+}
+
 function renderChart() {
   const content = app.querySelector('#chart-content'); content.replaceChildren();
   const current = selected();
@@ -146,38 +160,151 @@ function renderChart() {
   app.querySelector('#table-tab').setAttribute('aria-pressed', String(state.view === 'table'));
   content.className = 'chart-content-enter';
   if (state.view === 'table') return renderTable(content);
+  const teams = [...state.data.teams].sort((a, b) => a.rank - b.rank);
+  const maxPoints = teams[0].points;
+  const minPoints = teams.at(-1).points;
+  const pointSpan = maxPoints - minPoints;
+  const plotHeight = pointSpan * POINT_STEP + POINT_STEP;
+  const baseY = pointSpan * POINT_STEP + POINT_STEP / 2;
+  const groups = closePointGroups(teams);
   const scroll = el('div', 'chart-scroll'); scroll.tabIndex = 0; scroll.setAttribute('aria-label', t(state.language, 'chartAria'));
-  const chart = el('div', 'distance-chart distance-ladder');
+
+  const insights = el('div', 'profile-insights');
+  insights.append(el('span', 'profile-insights-title', t(state.language, 'closeGroups')));
+  const groupList = el('div', 'profile-group-list');
+  groups.forEach(group => groupList.append(el('span', 'profile-group-chip', t(state.language, 'closeGroupRange', {
+    clubs: group.length,
+    high: group[0].points,
+    low: group.at(-1).points
+  }))));
+  if (!groups.length) groupList.append(el('span', 'profile-group-empty', t(state.language, 'noTies')));
+  insights.append(groupList);
+
+  const chart = el('div', 'score-profile');
   chart.style.setProperty('--point-step', `${POINT_STEP}px`);
-  const rows = pointRows(state.data.teams);
+  chart.style.setProperty('--team-count', String(teams.length));
+  chart.style.setProperty('--profile-height', `${plotHeight}px`);
+
+  const board = el('div', 'score-board');
+  board.style.setProperty('--team-count', String(teams.length));
+  const axis = el('div', 'score-axis');
+  axis.setAttribute('aria-hidden', 'true');
+  const field = el('div', 'score-field');
+  field.style.height = `${plotHeight}px`;
+  field.setAttribute('role', 'group');
+  field.setAttribute('aria-label', t(state.language, 'chartAria'));
+  const labels = el('div', 'score-team-labels');
+  labels.style.gridTemplateColumns = `repeat(${teams.length}, minmax(0, 1fr))`;
+
+  const rows = pointRows(teams);
   rows.forEach((row, index) => {
-    const previous = rows[index - 1];
-    const next = rows.slice(index + 1).find(candidate => candidate.clubs.length);
-    const gapDistance = previous?.clubs.length && next ? previous.points - next.points : 0;
-    const node = el('div', `point-row${row.clubs.length ? ' is-occupied' : ''}${row.points === current.points ? ' is-focus-row' : ''}`);
-    node.style.setProperty('--row-index', String(index));
-    const number = el('span', 'point-number', row.clubs.length || row.points % 5 === 0 ? String(row.points) : '');
-    if (number.textContent) number.setAttribute('aria-label', formatPoints(state.language, row.points));
-    const track = el('div', 'point-track');
-    let gapMarker = null;
-    if (gapDistance >= 3 && !row.clubs.length && previous?.clubs.length) {
-      gapMarker = el('span', 'gap-marker');
-      gapMarker.append(el('span', 'gap-label', pointDistance(gapDistance)));
-      gapMarker.style.setProperty('--gap-height', `${gapDistance * POINT_STEP}px`);
-      gapMarker.setAttribute('aria-label', pointDistance(gapDistance));
+    const y = index * POINT_STEP + POINT_STEP / 2;
+    const guide = el('span', `score-guide${row.points % 5 === 0 ? ' is-major' : ''}${row.clubs.length ? ' is-occupied' : ''}`);
+    guide.style.top = `${y}px`;
+    field.append(guide);
+    if (row.points % 5 === 0 || row.clubs.length || row.points === minPoints) {
+      const label = el('span', `score-axis-value${row.clubs.length ? ' is-occupied' : ''}`, String(row.points));
+      label.style.top = `${y}px`;
+      axis.append(label);
     }
-    for (const team of row.clubs) {
-      const button = clubButton(team, current, state.zones, 20, id => {
-        state.selectedId = id; renderChart(); renderSelected();
-        app.querySelector(`.club-pill[data-team-id="${id}"]`)?.focus({ preventScroll: true });
-      }, state.language);
-      button.dataset.teamId = String(team.id);
-      button.style.setProperty('--club-order', String(team.rank));
-      track.append(button);
-    }
-    node.append(number, track); if (gapMarker) node.append(gapMarker); chart.append(node);
   });
-  scroll.append(chart); content.append(scroll, el('p', 'chart-footnote', t(state.language, 'chartNote')));
+
+  for (const group of groups) {
+    const firstIndex = teams.findIndex(team => team.id === group[0].id);
+    const highY = (maxPoints - group[0].points) * POINT_STEP + POINT_STEP / 2;
+    const lowY = (maxPoints - group.at(-1).points) * POINT_STEP + POINT_STEP / 2;
+    const band = el('span', 'score-cluster-band');
+    band.style.left = `${(firstIndex / teams.length) * 100}%`;
+    band.style.width = `${(group.length / teams.length) * 100}%`;
+    band.style.top = `${Math.max(0, highY - 17)}px`;
+    band.style.height = `${Math.max(34, lowY - highY + 34)}px`;
+    field.append(band);
+  }
+
+  teams.forEach((team, index) => {
+    const zone = `zone-${zoneForRank(team.rank, teams.length, state.zones)}`;
+    const top = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
+    const lane = el('span', `score-lane ${zone}`);
+    lane.style.left = `${(index / teams.length) * 100}%`;
+    lane.style.width = `${100 / teams.length}%`;
+    field.append(lane);
+    const bar = el('span', `score-value-bar ${zone}`);
+    bar.style.left = `${((index + .5) / teams.length) * 100}%`;
+    bar.style.top = `${top}px`;
+    bar.style.height = `${Math.max(2, baseY - top)}px`;
+    field.append(bar);
+    if (index > 0) {
+      const columnRule = el('span', 'score-column-rule');
+      columnRule.style.left = `${(index / teams.length) * 100}%`;
+      field.append(columnRule);
+    }
+  });
+
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const lineSvg = document.createElementNS(svgNS, 'svg');
+  lineSvg.classList.add('score-profile-line');
+  lineSvg.setAttribute('viewBox', `0 0 1000 ${plotHeight}`);
+  lineSvg.setAttribute('preserveAspectRatio', 'none');
+  lineSvg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS(svgNS, 'path');
+  const linePoints = teams.map((team, index) => {
+    const x = ((index + .5) / teams.length) * 1000;
+    const y = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
+    return `${index ? 'L' : 'M'} ${x} ${y}`;
+  }).join(' ');
+  path.setAttribute('d', linePoints);
+  path.setAttribute('fill', 'none');
+  path.setAttribute('vector-effect', 'non-scaling-stroke');
+  lineSvg.append(path);
+  field.append(lineSvg);
+
+  teams.forEach((team, index) => {
+    const top = (maxPoints - team.points) * POINT_STEP + POINT_STEP / 2;
+    const marker = el('button', `score-marker zone-${zoneForRank(team.rank, teams.length, state.zones)}${team.id === current.id ? ' is-selected' : ''}`);
+    marker.type = 'button';
+    marker.dataset.teamId = String(team.id);
+    marker.style.setProperty('--team-order', String(index));
+    marker.style.left = `${((index + .5) / teams.length) * 100}%`;
+    marker.style.top = `${top}px`;
+    marker.setAttribute('aria-pressed', String(team.id === current.id));
+    marker.setAttribute('aria-label', `${ordinal(state.language, team.rank)} ${team.name}, ${formatPoints(state.language, team.points)}`);
+    marker.title = `${team.name} · ${formatPoints(state.language, team.points)}`;
+    const teamCrest = crest(team);
+    teamCrest.setAttribute('aria-hidden', 'true');
+    marker.append(teamCrest, el('span', 'score-marker-rank', String(team.rank).padStart(2, '0')));
+    marker.addEventListener('click', () => {
+      state.selectedId = team.id;
+      renderChart();
+      renderSelected();
+      app.querySelector(`.score-marker[data-team-id="${team.id}"]`)?.focus({ preventScroll: true });
+    });
+    field.append(marker);
+
+    const label = el('div', 'score-team-label');
+    const rankLabel = el('span', 'score-team-rank', String(team.rank).padStart(2, '0'));
+    const nameLabel = el('span', 'score-team-name', team.name);
+    nameLabel.title = team.name;
+    label.append(rankLabel, nameLabel);
+    labels.append(label);
+  });
+
+  for (let index = 1; index < teams.length; index++) {
+    const gap = teams[index - 1].points - teams[index].points;
+    if (gap < 5) continue;
+    const y1 = (maxPoints - teams[index - 1].points) * POINT_STEP + POINT_STEP / 2;
+    const y2 = (maxPoints - teams[index].points) * POINT_STEP + POINT_STEP / 2;
+    const label = el('span', 'score-gap-label', pointDistance(gap));
+    label.style.left = `${(index / teams.length) * 100}%`;
+    label.style.top = `${(y1 + y2) / 2}px`;
+    label.setAttribute('aria-label', pointDistance(gap));
+    field.append(label);
+  }
+
+  const baseNote = el('p', 'profile-baseline-note', t(state.language, 'profileBase', { points: minPoints }));
+  board.append(axis, field, labels, baseNote);
+  chart.append(board);
+  scroll.append(chart);
+  content.append(insights, scroll, el('p', 'chart-footnote', t(state.language, 'chartNote')));
 }
 
 function renderTable(content) {
