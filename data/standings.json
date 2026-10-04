@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-03T23:04:24.008Z",
+  "updatedAt": "2026-10-04T02:39:37.911Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -74,22 +74,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
+      "id": 7632,
+      "name": "Atlético-MG",
+      "rank": 7,
+      "points": 43,
+      "played": 28,
+      "goalDifference": 5,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
+    },
+    {
       "id": 2674,
       "name": "Santos",
-      "rank": 7,
+      "rank": 8,
       "points": 41,
       "played": 28,
       "goalDifference": 2,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
-    },
-    {
-      "id": 7632,
-      "name": "Atlético-MG",
-      "rank": 8,
-      "points": 40,
-      "played": 27,
-      "goalDifference": 4,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
     {
       "id": 3456,
@@ -101,22 +101,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
-      "id": 6079,
-      "name": "Bragantino",
-      "rank": 10,
-      "points": 36,
-      "played": 27,
-      "goalDifference": 2,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
-    },
-    {
       "id": 2026,
       "name": "São Paulo",
-      "rank": 11,
+      "rank": 10,
       "points": 36,
       "played": 28,
       "goalDifference": 1,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
+    },
+    {
+      "id": 6079,
+      "name": "Bragantino",
+      "rank": 11,
+      "points": 36,
+      "played": 28,
+      "goalDifference": 1,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
     },
     {
       "id": 6086,
