@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-08T01:00:56.793Z",
+  "updatedAt": "2026-10-08T07:25:52.373Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -47,9 +47,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
     {
+      "id": 2022,
+      "name": "Cruzeiro",
+      "rank": 4,
+      "points": 48,
+      "played": 29,
+      "goalDifference": 4,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
+    },
+    {
       "id": 3445,
       "name": "Fluminense",
-      "rank": 4,
+      "rank": 5,
       "points": 48,
       "played": 28,
       "goalDifference": 8,
@@ -58,20 +67,11 @@
     {
       "id": 9967,
       "name": "Bahia",
-      "rank": 5,
+      "rank": 6,
       "points": 46,
       "played": 28,
       "goalDifference": 8,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
-    },
-    {
-      "id": 2022,
-      "name": "Cruzeiro",
-      "rank": 6,
-      "points": 45,
-      "played": 28,
-      "goalDifference": 2,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
       "id": 7632,
@@ -114,8 +114,8 @@
       "name": "São Paulo",
       "rank": 11,
       "points": 36,
-      "played": 28,
-      "goalDifference": 1,
+      "played": 29,
+      "goalDifference": -1,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
     },
     {
@@ -132,14 +132,23 @@
       "name": "Botafogo",
       "rank": 13,
       "points": 35,
-      "played": 28,
-      "goalDifference": -4,
+      "played": 29,
+      "goalDifference": -5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
+    },
+    {
+      "id": 3454,
+      "name": "Vasco",
+      "rank": 14,
+      "points": 34,
+      "played": 28,
+      "goalDifference": -6,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
     },
     {
       "id": 9169,
       "name": "Mirassol",
-      "rank": 14,
+      "rank": 15,
       "points": 33,
       "played": 29,
       "goalDifference": -9,
@@ -148,20 +157,11 @@
     {
       "id": 874,
       "name": "Corinthians",
-      "rank": 15,
+      "rank": 16,
       "points": 32,
       "played": 29,
       "goalDifference": -4,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
-    },
-    {
-      "id": 3454,
-      "name": "Vasco",
-      "rank": 16,
-      "points": 31,
-      "played": 27,
-      "goalDifference": -7,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
     },
     {
       "id": 1936,
