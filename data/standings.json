@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-09T02:10:15.493Z",
+  "updatedAt": "2026-10-09T09:04:37.178Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -32,15 +32,24 @@
       "id": 2029,
       "name": "Palmeiras",
       "rank": 2,
-      "points": 57,
-      "played": 28,
-      "goalDifference": 26,
+      "points": 60,
+      "played": 29,
+      "goalDifference": 27,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
+    },
+    {
+      "id": 3445,
+      "name": "Fluminense",
+      "rank": 3,
+      "points": 51,
+      "played": 29,
+      "goalDifference": 12,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
     },
     {
       "id": 3458,
       "name": "Athletico-PR",
-      "rank": 3,
+      "rank": 4,
       "points": 50,
       "played": 29,
       "goalDifference": 11,
@@ -49,28 +58,19 @@
     {
       "id": 2022,
       "name": "Cruzeiro",
-      "rank": 4,
+      "rank": 5,
       "points": 48,
       "played": 29,
       "goalDifference": 4,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
-      "id": 3445,
-      "name": "Fluminense",
-      "rank": 5,
-      "points": 48,
-      "played": 28,
-      "goalDifference": 8,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
-    },
-    {
       "id": 9967,
       "name": "Bahia",
       "rank": 6,
       "points": 46,
-      "played": 28,
-      "goalDifference": 8,
+      "played": 29,
+      "goalDifference": 7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
@@ -96,8 +96,8 @@
       "name": "Coritiba",
       "rank": 9,
       "points": 38,
-      "played": 28,
-      "goalDifference": -6,
+      "played": 29,
+      "goalDifference": -10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
