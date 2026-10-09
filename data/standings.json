@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-08T21:20:17.520Z",
+  "updatedAt": "2026-10-09T02:10:15.493Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -23,8 +23,8 @@
       "id": 819,
       "name": "Flamengo",
       "rank": 1,
-      "points": 60,
-      "played": 28,
+      "points": 61,
+      "played": 29,
       "goalDifference": 32,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
     },
@@ -41,8 +41,8 @@
       "id": 3458,
       "name": "Athletico-PR",
       "rank": 3,
-      "points": 49,
-      "played": 28,
+      "points": 50,
+      "played": 29,
       "goalDifference": 11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
@@ -77,8 +77,8 @@
       "id": 7632,
       "name": "Atlético-MG",
       "rank": 7,
-      "points": 43,
-      "played": 28,
+      "points": 44,
+      "played": 29,
       "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
@@ -86,8 +86,8 @@
       "id": 2674,
       "name": "Santos",
       "rank": 8,
-      "points": 41,
-      "played": 28,
+      "points": 42,
+      "played": 29,
       "goalDifference": 2,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
