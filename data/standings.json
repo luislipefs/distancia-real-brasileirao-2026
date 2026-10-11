@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-10T22:31:51.893Z",
+  "updatedAt": "2026-10-11T01:53:49.850Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -140,8 +140,8 @@
       "id": 3454,
       "name": "Vasco",
       "rank": 14,
-      "points": 34,
-      "played": 28,
+      "points": 35,
+      "played": 29,
       "goalDifference": -6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
     },
@@ -185,8 +185,8 @@
       "id": 4936,
       "name": "Remo",
       "rank": 19,
-      "points": 24,
-      "played": 29,
+      "points": 25,
+      "played": 30,
       "goalDifference": -15,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
