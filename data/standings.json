@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-11T23:44:05.020Z",
+  "updatedAt": "2026-10-12T05:58:13.038Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -56,9 +56,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
     {
+      "id": 9967,
+      "name": "Bahia",
+      "rank": 5,
+      "points": 49,
+      "played": 30,
+      "goalDifference": 8,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
+    },
+    {
       "id": 2022,
       "name": "Cruzeiro",
-      "rank": 5,
+      "rank": 6,
       "points": 48,
       "played": 29,
       "goalDifference": 4,
@@ -67,20 +76,11 @@
     {
       "id": 7632,
       "name": "Atlético-MG",
-      "rank": 6,
+      "rank": 7,
       "points": 47,
       "played": 30,
       "goalDifference": 6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
-    },
-    {
-      "id": 9967,
-      "name": "Bahia",
-      "rank": 7,
-      "points": 46,
-      "played": 29,
-      "goalDifference": 7,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
       "id": 2674,
@@ -150,8 +150,8 @@
       "name": "Mirassol",
       "rank": 15,
       "points": 33,
-      "played": 29,
-      "goalDifference": -9,
+      "played": 30,
+      "goalDifference": -10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
     },
     {
