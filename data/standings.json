@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-12T22:59:25.293Z",
+  "updatedAt": "2026-10-13T03:34:26.000Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -38,22 +38,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
     {
+      "id": 3458,
+      "name": "Athletico-PR",
+      "rank": 3,
+      "points": 53,
+      "played": 30,
+      "goalDifference": 14,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
+    },
+    {
       "id": 3445,
       "name": "Fluminense",
-      "rank": 3,
+      "rank": 4,
       "points": 51,
       "played": 30,
       "goalDifference": 11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
-    },
-    {
-      "id": 3458,
-      "name": "Athletico-PR",
-      "rank": 4,
-      "points": 50,
-      "played": 29,
-      "goalDifference": 11,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
     {
       "id": 9967,
@@ -69,8 +69,8 @@
       "name": "Cruzeiro",
       "rank": 6,
       "points": 48,
-      "played": 29,
-      "goalDifference": 4,
+      "played": 30,
+      "goalDifference": 2,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
@@ -92,9 +92,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
     {
+      "id": 6079,
+      "name": "Bragantino",
+      "rank": 9,
+      "points": 40,
+      "played": 30,
+      "goalDifference": 3,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
+    },
+    {
       "id": 2026,
       "name": "São Paulo",
-      "rank": 9,
+      "rank": 10,
       "points": 39,
       "played": 30,
       "goalDifference": 0,
@@ -103,20 +112,11 @@
     {
       "id": 3456,
       "name": "Coritiba",
-      "rank": 10,
+      "rank": 11,
       "points": 39,
       "played": 30,
       "goalDifference": -10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
-    },
-    {
-      "id": 6079,
-      "name": "Bragantino",
-      "rank": 11,
-      "points": 37,
-      "played": 29,
-      "goalDifference": 1,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
     },
     {
       "id": 3457,
@@ -195,8 +195,8 @@
       "name": "Chapecoense",
       "rank": 20,
       "points": 18,
-      "played": 28,
-      "goalDifference": -28,
+      "played": 29,
+      "goalDifference": -31,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
