@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-16T23:35:35.715Z",
+  "updatedAt": "2026-10-17T04:26:08.717Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -137,22 +137,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
     },
     {
+      "id": 9169,
+      "name": "Mirassol",
+      "rank": 14,
+      "points": 36,
+      "played": 31,
+      "goalDifference": -8,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
+    },
+    {
       "id": 3454,
       "name": "Vasco",
-      "rank": 14,
+      "rank": 15,
       "points": 35,
       "played": 29,
       "goalDifference": -6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
-    },
-    {
-      "id": 9169,
-      "name": "Mirassol",
-      "rank": 15,
-      "points": 33,
-      "played": 30,
-      "goalDifference": -10,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
     },
     {
       "id": 874,
@@ -168,8 +168,8 @@
       "name": "Internacional",
       "rank": 17,
       "points": 32,
-      "played": 30,
-      "goalDifference": -5,
+      "played": 31,
+      "goalDifference": -7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
     },
     {
