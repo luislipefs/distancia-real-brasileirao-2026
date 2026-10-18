@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-18T01:02:43.876Z",
+  "updatedAt": "2026-10-18T05:53:53.807Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -83,9 +83,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
+      "id": 2026,
+      "name": "São Paulo",
+      "rank": 8,
+      "points": 42,
+      "played": 31,
+      "goalDifference": 1,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
+    },
+    {
       "id": 2674,
       "name": "Santos",
-      "rank": 8,
+      "rank": 9,
       "points": 42,
       "played": 30,
       "goalDifference": 1,
@@ -94,20 +103,11 @@
     {
       "id": 6079,
       "name": "Bragantino",
-      "rank": 9,
+      "rank": 10,
       "points": 40,
       "played": 30,
       "goalDifference": 3,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
-    },
-    {
-      "id": 2026,
-      "name": "São Paulo",
-      "rank": 10,
-      "points": 39,
-      "played": 30,
-      "goalDifference": 0,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
     },
     {
       "id": 6086,
@@ -150,8 +150,8 @@
       "name": "Vasco",
       "rank": 15,
       "points": 35,
-      "played": 29,
-      "goalDifference": -6,
+      "played": 30,
+      "goalDifference": -7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
     },
     {
