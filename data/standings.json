@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-18T20:43:29.409Z",
+  "updatedAt": "2026-10-18T23:12:19.934Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -47,18 +47,27 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
     {
-      "id": 3445,
-      "name": "Fluminense",
+      "id": 2022,
+      "name": "Cruzeiro",
       "rank": 4,
       "points": 51,
-      "played": 30,
-      "goalDifference": 11,
+      "played": 31,
+      "goalDifference": 4,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
+    },
+    {
+      "id": 3445,
+      "name": "Fluminense",
+      "rank": 5,
+      "points": 51,
+      "played": 31,
+      "goalDifference": 10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
     },
     {
       "id": 7632,
       "name": "Atlético-MG",
-      "rank": 5,
+      "rank": 6,
       "points": 50,
       "played": 31,
       "goalDifference": 7,
@@ -67,38 +76,29 @@
     {
       "id": 9967,
       "name": "Bahia",
-      "rank": 6,
+      "rank": 7,
       "points": 49,
       "played": 30,
       "goalDifference": 8,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
-      "id": 2022,
-      "name": "Cruzeiro",
-      "rank": 7,
-      "points": 48,
-      "played": 30,
+      "id": 2674,
+      "name": "Santos",
+      "rank": 8,
+      "points": 45,
+      "played": 31,
       "goalDifference": 2,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
     {
       "id": 2026,
       "name": "São Paulo",
-      "rank": 8,
+      "rank": 9,
       "points": 42,
       "played": 31,
       "goalDifference": 1,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
-    },
-    {
-      "id": 2674,
-      "name": "Santos",
-      "rank": 9,
-      "points": 42,
-      "played": 30,
-      "goalDifference": 1,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
     {
       "id": 6079,
@@ -177,8 +177,8 @@
       "name": "Grêmio",
       "rank": 18,
       "points": 31,
-      "played": 30,
-      "goalDifference": -8,
+      "played": 31,
+      "goalDifference": -10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png"
     },
     {
