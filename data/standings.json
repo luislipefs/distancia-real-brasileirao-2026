@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-18T23:12:19.934Z",
+  "updatedAt": "2026-10-19T01:16:52.155Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -20,22 +20,22 @@
   },
   "teams": [
     {
+      "id": 819,
+      "name": "Flamengo",
+      "rank": 1,
+      "points": 67,
+      "played": 31,
+      "goalDifference": 36,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
+    },
+    {
       "id": 2029,
       "name": "Palmeiras",
-      "rank": 1,
+      "rank": 2,
       "points": 66,
       "played": 31,
       "goalDifference": 32,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
-    },
-    {
-      "id": 819,
-      "name": "Flamengo",
-      "rank": 2,
-      "points": 64,
-      "played": 30,
-      "goalDifference": 33,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
     },
     {
       "id": 3458,
@@ -78,8 +78,8 @@
       "name": "Bahia",
       "rank": 7,
       "points": 49,
-      "played": 30,
-      "goalDifference": 8,
+      "played": 31,
+      "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
@@ -104,8 +104,8 @@
       "id": 6079,
       "name": "Bragantino",
       "rank": 10,
-      "points": 40,
-      "played": 30,
+      "points": 41,
+      "played": 31,
       "goalDifference": 3,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
     },
@@ -185,8 +185,8 @@
       "id": 4936,
       "name": "Remo",
       "rank": 19,
-      "points": 25,
-      "played": 30,
+      "points": 26,
+      "played": 31,
       "goalDifference": -15,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
