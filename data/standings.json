@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-20T00:20:04.529Z",
+  "updatedAt": "2026-10-20T06:00:19.291Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -131,8 +131,8 @@
       "id": 3457,
       "name": "Vitória",
       "rank": 13,
-      "points": 36,
-      "played": 30,
+      "points": 37,
+      "played": 31,
       "goalDifference": -11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png"
     },
@@ -158,8 +158,8 @@
       "id": 874,
       "name": "Corinthians",
       "rank": 16,
-      "points": 32,
-      "played": 30,
+      "points": 33,
+      "played": 31,
       "goalDifference": -7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
     },
