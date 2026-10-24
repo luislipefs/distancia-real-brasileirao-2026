@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-24T00:42:15.840Z",
+  "updatedAt": "2026-10-24T05:54:03.702Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -38,22 +38,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
     {
+      "id": 2022,
+      "name": "Cruzeiro",
+      "rank": 3,
+      "points": 54,
+      "played": 32,
+      "goalDifference": 5,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
+    },
+    {
       "id": 3458,
       "name": "Athletico-PR",
-      "rank": 3,
+      "rank": 4,
       "points": 53,
       "played": 31,
       "goalDifference": 12,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
-    },
-    {
-      "id": 2022,
-      "name": "Cruzeiro",
-      "rank": 4,
-      "points": 51,
-      "played": 31,
-      "goalDifference": 4,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
       "id": 3445,
@@ -186,8 +186,8 @@
       "name": "Remo",
       "rank": 19,
       "points": 26,
-      "played": 31,
-      "goalDifference": -15,
+      "played": 32,
+      "goalDifference": -16,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
     {
