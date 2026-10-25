@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-25T01:13:05.181Z",
+  "updatedAt": "2026-10-25T06:08:58.259Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -77,8 +77,8 @@
       "id": 9967,
       "name": "Bahia",
       "rank": 7,
-      "points": 49,
-      "played": 31,
+      "points": 50,
+      "played": 32,
       "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
@@ -86,8 +86,8 @@
       "id": 2674,
       "name": "Santos",
       "rank": 8,
-      "points": 45,
-      "played": 31,
+      "points": 46,
+      "played": 32,
       "goalDifference": 2,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
