@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-29T00:56:34.669Z",
+  "updatedAt": "2026-10-29T07:05:25.992Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -65,22 +65,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
     },
     {
+      "id": 9967,
+      "name": "Bahia",
+      "rank": 6,
+      "points": 53,
+      "played": 33,
+      "goalDifference": 6,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
+    },
+    {
       "id": 7632,
       "name": "Atlético-MG",
-      "rank": 6,
+      "rank": 7,
       "points": 50,
       "played": 32,
       "goalDifference": 6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
-    },
-    {
-      "id": 9967,
-      "name": "Bahia",
-      "rank": 7,
-      "points": 50,
-      "played": 32,
-      "goalDifference": 5,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
       "id": 2674,
@@ -105,8 +105,8 @@
       "name": "São Paulo",
       "rank": 10,
       "points": 43,
-      "played": 32,
-      "goalDifference": 1,
+      "played": 33,
+      "goalDifference": 0,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
     },
     {
@@ -114,8 +114,8 @@
       "name": "Botafogo",
       "rank": 11,
       "points": 39,
-      "played": 32,
-      "goalDifference": -7,
+      "played": 33,
+      "goalDifference": -8,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
     },
     {
@@ -185,9 +185,9 @@
       "id": 4936,
       "name": "Remo",
       "rank": 19,
-      "points": 26,
-      "played": 32,
-      "goalDifference": -16,
+      "points": 29,
+      "played": 33,
+      "goalDifference": -15,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
     {
