@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-28T21:04:46.914Z",
+  "updatedAt": "2026-10-29T00:56:34.669Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -32,8 +32,8 @@
       "id": 2029,
       "name": "Palmeiras",
       "rank": 2,
-      "points": 69,
-      "played": 32,
+      "points": 70,
+      "played": 33,
       "goalDifference": 34,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
@@ -59,9 +59,9 @@
       "id": 3445,
       "name": "Fluminense",
       "rank": 5,
-      "points": 51,
-      "played": 32,
-      "goalDifference": 9,
+      "points": 54,
+      "played": 33,
+      "goalDifference": 10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
     },
     {
@@ -86,28 +86,28 @@
       "id": 2674,
       "name": "Santos",
       "rank": 8,
-      "points": 46,
-      "played": 32,
+      "points": 47,
+      "played": 33,
       "goalDifference": 2,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
     {
+      "id": 6079,
+      "name": "Bragantino",
+      "rank": 9,
+      "points": 44,
+      "played": 33,
+      "goalDifference": 4,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
+    },
+    {
       "id": 2026,
       "name": "São Paulo",
-      "rank": 9,
+      "rank": 10,
       "points": 43,
       "played": 32,
       "goalDifference": 1,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
-    },
-    {
-      "id": 6079,
-      "name": "Bragantino",
-      "rank": 10,
-      "points": 41,
-      "played": 32,
-      "goalDifference": 1,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
     },
     {
       "id": 6086,
@@ -159,8 +159,8 @@
       "name": "Internacional",
       "rank": 16,
       "points": 35,
-      "played": 32,
-      "goalDifference": -4,
+      "played": 33,
+      "goalDifference": -5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
     },
     {
@@ -195,8 +195,8 @@
       "name": "Chapecoense",
       "rank": 20,
       "points": 21,
-      "played": 31,
-      "goalDifference": -31,
+      "played": 32,
+      "goalDifference": -34,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
