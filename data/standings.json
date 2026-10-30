@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-30T00:59:18.377Z",
+  "updatedAt": "2026-10-30T07:06:29.739Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -47,22 +47,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
-      "id": 3458,
-      "name": "Athletico-PR",
-      "rank": 4,
-      "points": 54,
-      "played": 32,
-      "goalDifference": 12,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
-    },
-    {
       "id": 3445,
       "name": "Fluminense",
-      "rank": 5,
+      "rank": 4,
       "points": 54,
       "played": 33,
       "goalDifference": 10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
+    },
+    {
+      "id": 3458,
+      "name": "Athletico-PR",
+      "rank": 5,
+      "points": 54,
+      "played": 33,
+      "goalDifference": 10,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
     {
       "id": 9967,
@@ -146,9 +146,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png"
     },
     {
+      "id": 6273,
+      "name": "Grêmio",
+      "rank": 15,
+      "points": 37,
+      "played": 33,
+      "goalDifference": -7,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png"
+    },
+    {
       "id": 9169,
       "name": "Mirassol",
-      "rank": 15,
+      "rank": 16,
       "points": 37,
       "played": 32,
       "goalDifference": -8,
@@ -157,20 +166,11 @@
     {
       "id": 1936,
       "name": "Internacional",
-      "rank": 16,
+      "rank": 17,
       "points": 35,
       "played": 33,
       "goalDifference": -5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
-    },
-    {
-      "id": 6273,
-      "name": "Grêmio",
-      "rank": 17,
-      "points": 34,
-      "played": 32,
-      "goalDifference": -9,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png"
     },
     {
       "id": 874,
