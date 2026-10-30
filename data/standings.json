@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-29T20:17:32.378Z",
+  "updatedAt": "2026-10-30T00:59:18.377Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -23,9 +23,9 @@
       "id": 819,
       "name": "Flamengo",
       "rank": 1,
-      "points": 70,
-      "played": 32,
-      "goalDifference": 37,
+      "points": 73,
+      "played": 33,
+      "goalDifference": 40,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
     },
     {
@@ -41,9 +41,9 @@
       "id": 2022,
       "name": "Cruzeiro",
       "rank": 3,
-      "points": 54,
-      "played": 32,
-      "goalDifference": 5,
+      "points": 57,
+      "played": 33,
+      "goalDifference": 6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
@@ -78,8 +78,8 @@
       "name": "Atlético-MG",
       "rank": 7,
       "points": 50,
-      "played": 32,
-      "goalDifference": 6,
+      "played": 33,
+      "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
     {
@@ -132,8 +132,8 @@
       "name": "Vasco",
       "rank": 13,
       "points": 38,
-      "played": 31,
-      "goalDifference": -6,
+      "played": 32,
+      "goalDifference": -9,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
     },
     {
