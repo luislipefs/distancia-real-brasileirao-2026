@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-10-30T23:46:51.788Z",
+  "updatedAt": "2026-10-31T05:40:30.294Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -159,27 +159,27 @@
       "name": "Mirassol",
       "rank": 16,
       "points": 37,
-      "played": 32,
-      "goalDifference": -8,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
-    },
-    {
-      "id": 1936,
-      "name": "Internacional",
-      "rank": 17,
-      "points": 35,
       "played": 33,
-      "goalDifference": -5,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
+      "goalDifference": -10,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
     },
     {
       "id": 874,
       "name": "Corinthians",
-      "rank": 18,
-      "points": 33,
-      "played": 32,
-      "goalDifference": -8,
+      "rank": 17,
+      "points": 36,
+      "played": 33,
+      "goalDifference": -6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
+    },
+    {
+      "id": 1936,
+      "name": "Internacional",
+      "rank": 18,
+      "points": 35,
+      "played": 33,
+      "goalDifference": -5,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
     },
     {
       "id": 4936,
