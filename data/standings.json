@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-04T01:21:20.474Z",
+  "updatedAt": "2026-11-04T09:12:23.059Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -114,8 +114,8 @@
       "name": "Coritiba",
       "rank": 11,
       "points": 42,
-      "played": 33,
-      "goalDifference": -10,
+      "played": 34,
+      "goalDifference": -11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
@@ -155,9 +155,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png"
     },
     {
+      "id": 1936,
+      "name": "Internacional",
+      "rank": 16,
+      "points": 38,
+      "played": 34,
+      "goalDifference": -4,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
+    },
+    {
       "id": 6273,
       "name": "Grêmio",
-      "rank": 16,
+      "rank": 17,
       "points": 37,
       "played": 33,
       "goalDifference": -7,
@@ -166,20 +175,11 @@
     {
       "id": 874,
       "name": "Corinthians",
-      "rank": 17,
+      "rank": 18,
       "points": 36,
       "played": 33,
       "goalDifference": -6,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
-    },
-    {
-      "id": 1936,
-      "name": "Internacional",
-      "rank": 18,
-      "points": 35,
-      "played": 33,
-      "goalDifference": -5,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
     },
     {
       "id": 4936,
