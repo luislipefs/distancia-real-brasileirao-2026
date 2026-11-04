@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-03T20:58:42.336Z",
+  "updatedAt": "2026-11-04T01:21:20.474Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -119,9 +119,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
+      "id": 9169,
+      "name": "Mirassol",
+      "rank": 12,
+      "points": 40,
+      "played": 34,
+      "goalDifference": -9,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
+    },
+    {
       "id": 6086,
       "name": "Botafogo",
-      "rank": 12,
+      "rank": 13,
       "points": 39,
       "played": 33,
       "goalDifference": -8,
@@ -130,7 +139,7 @@
     {
       "id": 3454,
       "name": "Vasco",
-      "rank": 13,
+      "rank": 14,
       "points": 38,
       "played": 32,
       "goalDifference": -9,
@@ -139,7 +148,7 @@
     {
       "id": 3457,
       "name": "Vitória",
-      "rank": 14,
+      "rank": 15,
       "points": 38,
       "played": 33,
       "goalDifference": -13,
@@ -148,20 +157,11 @@
     {
       "id": 6273,
       "name": "Grêmio",
-      "rank": 15,
+      "rank": 16,
       "points": 37,
       "played": 33,
       "goalDifference": -7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png"
-    },
-    {
-      "id": 9169,
-      "name": "Mirassol",
-      "rank": 16,
-      "points": 37,
-      "played": 33,
-      "goalDifference": -10,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
     },
     {
       "id": 874,
@@ -195,8 +195,8 @@
       "name": "Chapecoense",
       "rank": 20,
       "points": 21,
-      "played": 32,
-      "goalDifference": -34,
+      "played": 33,
+      "goalDifference": -35,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
