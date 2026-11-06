@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-05T20:40:00.402Z",
+  "updatedAt": "2026-11-06T01:32:52.154Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -32,9 +32,9 @@
       "id": 2029,
       "name": "Palmeiras",
       "rank": 2,
-      "points": 70,
-      "played": 33,
-      "goalDifference": 34,
+      "points": 73,
+      "played": 34,
+      "goalDifference": 39,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
     {
@@ -186,8 +186,8 @@
       "name": "Remo",
       "rank": 19,
       "points": 29,
-      "played": 33,
-      "goalDifference": -15,
+      "played": 34,
+      "goalDifference": -20,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
     {
