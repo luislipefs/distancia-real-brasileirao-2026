@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-06T01:32:52.154Z",
+  "updatedAt": "2026-11-06T09:24:32.969Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -41,9 +41,9 @@
       "id": 2022,
       "name": "Cruzeiro",
       "rank": 3,
-      "points": 57,
-      "played": 33,
-      "goalDifference": 6,
+      "points": 60,
+      "played": 34,
+      "goalDifference": 7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
@@ -69,8 +69,8 @@
       "name": "Bahia",
       "rank": 6,
       "points": 53,
-      "played": 33,
-      "goalDifference": 6,
+      "played": 34,
+      "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
