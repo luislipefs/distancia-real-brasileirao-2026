@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-14T21:29:45.055Z",
+  "updatedAt": "2026-11-15T01:55:20.546Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -77,8 +77,8 @@
       "id": 7632,
       "name": "Atlético-MG",
       "rank": 7,
-      "points": 50,
-      "played": 34,
+      "points": 51,
+      "played": 35,
       "goalDifference": 4,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
@@ -110,9 +110,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
     },
     {
+      "id": 3454,
+      "name": "Vasco",
+      "rank": 11,
+      "points": 44,
+      "played": 34,
+      "goalDifference": -5,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
+    },
+    {
       "id": 6086,
       "name": "Botafogo",
-      "rank": 11,
+      "rank": 12,
       "points": 42,
       "played": 34,
       "goalDifference": -7,
@@ -121,27 +130,18 @@
     {
       "id": 3456,
       "name": "Coritiba",
-      "rank": 12,
+      "rank": 13,
       "points": 42,
       "played": 34,
       "goalDifference": -11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
-      "id": 3454,
-      "name": "Vasco",
-      "rank": 13,
-      "points": 41,
-      "played": 33,
-      "goalDifference": -7,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
-    },
-    {
       "id": 9169,
       "name": "Mirassol",
       "rank": 14,
-      "points": 40,
-      "played": 34,
+      "points": 41,
+      "played": 35,
       "goalDifference": -9,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
     },
@@ -195,8 +195,8 @@
       "name": "Chapecoense",
       "rank": 20,
       "points": 21,
-      "played": 33,
-      "goalDifference": -35,
+      "played": 34,
+      "goalDifference": -37,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
