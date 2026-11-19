@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-18T21:56:47.841Z",
+  "updatedAt": "2026-11-19T03:27:28.003Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -23,9 +23,9 @@
       "id": 819,
       "name": "Flamengo",
       "rank": 1,
-      "points": 76,
-      "played": 34,
-      "goalDifference": 42,
+      "points": 79,
+      "played": 35,
+      "goalDifference": 43,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
     },
     {
@@ -33,17 +33,17 @@
       "name": "Palmeiras",
       "rank": 2,
       "points": 73,
-      "played": 34,
-      "goalDifference": 39,
+      "played": 35,
+      "goalDifference": 38,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
     {
       "id": 2022,
       "name": "Cruzeiro",
       "rank": 3,
-      "points": 60,
-      "played": 34,
-      "goalDifference": 7,
+      "points": 63,
+      "played": 35,
+      "goalDifference": 8,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
@@ -60,16 +60,16 @@
       "name": "Athletico-PR",
       "rank": 5,
       "points": 54,
-      "played": 34,
-      "goalDifference": 8,
+      "played": 35,
+      "goalDifference": 7,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
     {
       "id": 9967,
       "name": "Bahia",
       "rank": 6,
-      "points": 53,
-      "played": 34,
+      "points": 54,
+      "played": 35,
       "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
@@ -83,22 +83,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
     {
+      "id": 2674,
+      "name": "Santos",
+      "rank": 8,
+      "points": 50,
+      "played": 35,
+      "goalDifference": 2,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
+    },
+    {
       "id": 6079,
       "name": "Bragantino",
-      "rank": 8,
+      "rank": 9,
       "points": 47,
       "played": 34,
       "goalDifference": 5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png"
-    },
-    {
-      "id": 2674,
-      "name": "Santos",
-      "rank": 9,
-      "points": 47,
-      "played": 34,
-      "goalDifference": 1,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
     {
       "id": 2026,
@@ -123,8 +123,8 @@
       "name": "Botafogo",
       "rank": 12,
       "points": 42,
-      "played": 34,
-      "goalDifference": -7,
+      "played": 35,
+      "goalDifference": -11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
     },
     {
@@ -132,8 +132,8 @@
       "name": "Coritiba",
       "rank": 13,
       "points": 42,
-      "played": 34,
-      "goalDifference": -11,
+      "played": 35,
+      "goalDifference": -12,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
@@ -146,9 +146,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
     },
     {
+      "id": 874,
+      "name": "Corinthians",
+      "rank": 15,
+      "points": 40,
+      "played": 35,
+      "goalDifference": -2,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
+    },
+    {
       "id": 3457,
       "name": "Vitória",
-      "rank": 15,
+      "rank": 16,
       "points": 38,
       "played": 34,
       "goalDifference": -16,
@@ -157,27 +166,18 @@
     {
       "id": 1936,
       "name": "Internacional",
-      "rank": 16,
+      "rank": 17,
       "points": 38,
       "played": 34,
       "goalDifference": -4,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
     },
     {
-      "id": 874,
-      "name": "Corinthians",
-      "rank": 17,
-      "points": 37,
-      "played": 34,
-      "goalDifference": -6,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
-    },
-    {
       "id": 6273,
       "name": "Grêmio",
       "rank": 18,
-      "points": 37,
-      "played": 34,
+      "points": 38,
+      "played": 35,
       "goalDifference": -9,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png"
     },
@@ -185,9 +185,9 @@
       "id": 4936,
       "name": "Remo",
       "rank": 19,
-      "points": 29,
-      "played": 34,
-      "goalDifference": -20,
+      "points": 32,
+      "played": 35,
+      "goalDifference": -18,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
     {
@@ -195,8 +195,8 @@
       "name": "Chapecoense",
       "rank": 20,
       "points": 21,
-      "played": 34,
-      "goalDifference": -37,
+      "played": 35,
+      "goalDifference": -39,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
