@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-21T17:31:19.946Z",
+  "updatedAt": "2026-11-21T23:15:35.762Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -23,8 +23,8 @@
       "id": 819,
       "name": "Flamengo",
       "rank": 1,
-      "points": 79,
-      "played": 35,
+      "points": 80,
+      "played": 36,
       "goalDifference": 43,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png"
     },
@@ -32,8 +32,8 @@
       "id": 2029,
       "name": "Palmeiras",
       "rank": 2,
-      "points": 73,
-      "played": 35,
+      "points": 74,
+      "played": 36,
       "goalDifference": 38,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
@@ -69,8 +69,8 @@
       "name": "Bahia",
       "rank": 6,
       "points": 54,
-      "played": 35,
-      "goalDifference": 5,
+      "played": 36,
+      "goalDifference": 4,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png"
     },
     {
@@ -110,9 +110,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
     },
     {
+      "id": 3456,
+      "name": "Coritiba",
+      "rank": 11,
+      "points": 45,
+      "played": 36,
+      "goalDifference": -11,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
+    },
+    {
       "id": 2026,
       "name": "São Paulo",
-      "rank": 11,
+      "rank": 12,
       "points": 44,
       "played": 35,
       "goalDifference": -1,
@@ -121,20 +130,11 @@
     {
       "id": 6086,
       "name": "Botafogo",
-      "rank": 12,
+      "rank": 13,
       "points": 42,
       "played": 35,
       "goalDifference": -11,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
-    },
-    {
-      "id": 3456,
-      "name": "Coritiba",
-      "rank": 13,
-      "points": 42,
-      "played": 35,
-      "goalDifference": -12,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png"
     },
     {
       "id": 3457,
