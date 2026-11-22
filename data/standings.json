@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-21T23:15:35.762Z",
+  "updatedAt": "2026-11-22T03:15:16.465Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -41,9 +41,9 @@
       "id": 2022,
       "name": "Cruzeiro",
       "rank": 3,
-      "points": 63,
-      "played": 35,
-      "goalDifference": 8,
+      "points": 66,
+      "played": 36,
+      "goalDifference": 9,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png"
     },
     {
@@ -195,8 +195,8 @@
       "name": "Chapecoense",
       "rank": 20,
       "points": 21,
-      "played": 35,
-      "goalDifference": -39,
+      "played": 36,
+      "goalDifference": -40,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
