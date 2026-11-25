@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-24T17:44:43.870Z",
+  "updatedAt": "2026-11-25T02:28:49.200Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -33,8 +33,8 @@
       "name": "Palmeiras",
       "rank": 2,
       "points": 74,
-      "played": 36,
-      "goalDifference": 38,
+      "played": 37,
+      "goalDifference": 35,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png"
     },
     {
@@ -194,9 +194,9 @@
       "id": 9318,
       "name": "Chapecoense",
       "rank": 20,
-      "points": 21,
-      "played": 36,
-      "goalDifference": -40,
+      "points": 24,
+      "played": 37,
+      "goalDifference": -37,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png"
     }
   ]
