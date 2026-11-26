@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-25T22:32:09.562Z",
+  "updatedAt": "2026-11-26T05:03:51.201Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -77,8 +77,8 @@
       "id": 7632,
       "name": "Atlético-MG",
       "rank": 7,
-      "points": 51,
-      "played": 35,
+      "points": 52,
+      "played": 36,
       "goalDifference": 4,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
@@ -146,9 +146,18 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png"
     },
     {
+      "id": 874,
+      "name": "Corinthians",
+      "rank": 15,
+      "points": 41,
+      "played": 36,
+      "goalDifference": -2,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
+    },
+    {
       "id": 6273,
       "name": "Grêmio",
-      "rank": 15,
+      "rank": 16,
       "points": 41,
       "played": 36,
       "goalDifference": -7,
@@ -157,20 +166,11 @@
     {
       "id": 9169,
       "name": "Mirassol",
-      "rank": 16,
+      "rank": 17,
       "points": 41,
       "played": 36,
       "goalDifference": -10,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png"
-    },
-    {
-      "id": 874,
-      "name": "Corinthians",
-      "rank": 17,
-      "points": 40,
-      "played": 35,
-      "goalDifference": -2,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
     },
     {
       "id": 1936,
