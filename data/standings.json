@@ -3,7 +3,7 @@
   "mode": "live",
   "season": 2026,
   "competition": "Série A",
-  "updatedAt": "2026-11-26T23:53:22.944Z",
+  "updatedAt": "2026-11-27T08:32:56.333Z",
   "source": {
     "name": "ESPN",
     "url": "https://www.espn.com.br/futebol/classificacao/_/liga/bra.1",
@@ -101,22 +101,22 @@
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
     },
     {
+      "id": 2026,
+      "name": "São Paulo",
+      "rank": 10,
+      "points": 48,
+      "played": 37,
+      "goalDifference": 1,
+      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
+    },
+    {
       "id": 3454,
       "name": "Vasco",
-      "rank": 10,
+      "rank": 11,
       "points": 47,
       "played": 36,
       "goalDifference": -5,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png"
-    },
-    {
-      "id": 2026,
-      "name": "São Paulo",
-      "rank": 11,
-      "points": 45,
-      "played": 36,
-      "goalDifference": -1,
-      "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png"
     },
     {
       "id": 3456,
@@ -186,8 +186,8 @@
       "name": "Remo",
       "rank": 19,
       "points": 32,
-      "played": 36,
-      "goalDifference": -20,
+      "played": 37,
+      "goalDifference": -22,
       "crestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png"
     },
     {
